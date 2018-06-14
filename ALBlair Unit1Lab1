@@ -1,0 +1,62 @@
+﻿using System;
+
+namespace GCLab1Part1
+// Created by Aquoinette L Blair
+{
+    class MainClass
+    {
+        public static void Main(string[] args) //Method/Function - when program starts
+
+        {
+            //Variables
+            int num1 = 10;
+            int num2 = 20;
+            int sum = 30;
+
+            /* wanted to set parameters for 3 digit inputs only so all numbers would
+               be the same length. */
+            int[] nums = new int[3];
+
+
+            //user input info and prompts
+
+            try //tried an exception to prevent invalid entries. Looking forward to learning this too
+            {
+                Console.WriteLine("Please enter your first 3 digit number");
+                num1 = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Please enter your second 3 digit number");
+                num2 = Convert.ToInt32(Console.ReadLine());
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine("Invalid entry. Please enter a 3 digit number.");
+            }
+    
+            sum = num1 + num2;  
+
+            /* Couldn't get individual places to work but did total user's input.  
+               and input total.  Looking forward to additional training to master this */
+     
+                Console.WriteLine("Thank you.  You picked {0} and {1}", num1, num2);
+                Console.ReadLine();
+                
+            Console.WriteLine("Your total is {0}", sum);
+
+            string name1 = "num1";
+            string name2 = "num2";
+
+            if (name1 == name2){
+                Console.WriteLine("True");
+            } else {
+                Console.WriteLine("False");
+            }
+
+            Console.ReadLine();
+
+                
+        }
+
+
+    }
+}

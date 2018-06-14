@@ -1,0 +1,27 @@
+﻿using System;
+
+namespace GCLab1Part2
+/* Created by Aquoinette L. Blair
+  Grand Rapids, MI
+ */ 
+{
+    class MainClass
+    {
+        public static void Main(string[] args)
+        {
+            DateTime arrival;
+            DateTime today = DateTime.Now;
+          
+            Console.WriteLine("Enter your original arrival day in dd/mm/yyyy format");
+            arrival = Convert.ToDateTime(Console.ReadLine()).Date;
+
+            TimeSpan calculate = today.Subtract(arrival);
+
+            Console.WriteLine("You arrived " + calculate.Days + " Days ago");
+            Console.WriteLine("You arrived " + calculate.Days*24 + " Hours ago");
+            Console.WriteLine("You arrived " + calculate.Days* 24*60 + " Minutes ago");
+
+            Console.ReadLine();
+        }
+    }
+}
